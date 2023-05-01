@@ -23,8 +23,15 @@
                 animation-iteration-count: 2;
             }
         </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const h1 = document.querySelector('h1');
+                h1.style.animationPlayState = 'paused';
+            });
+        </script>
     </head>
     <body>
         <h1>Welcome!</h1>
+        <button>Click Here!</button>
     </body>
 </html>
