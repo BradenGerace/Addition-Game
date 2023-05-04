@@ -10,18 +10,16 @@
         <div id="app"></div>
 
         <script type="text/babel">
-            function Hello(props) {
-                return (
-                <div>Hello, {props.name}!</div>
-                );
-            }
+            
 
             function App() {
+
+                const [count, setCount] = React.useState(27);
+
                 return (
                     <div>
-                        <Hello name="Harry" />
-                        <Hello name="Barry" />
-                        <Hello name="Darry" />
+                        <div>{count}</div>
+                        <button>Count</button>
                     </div>
                 );
             }
