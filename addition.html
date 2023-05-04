@@ -4,6 +4,16 @@
         <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            #app {
+                text-align: center;
+                font-family: sans-serif;
+            }
+
+            #problem {
+                font-size: 48px;
+            }
+        </style>
         <title>Counter</title>
     </head>
     <body>
@@ -51,8 +61,8 @@
 
                 return (
                     <div>
-                        <div>{state.num1} + {state.num2}</div>
-                        <input onKeyPress={enterKeyPress} onChange={updateResponse} value={state.response}/>
+                        <div id="problem">{state.num1} + {state.num2}</div>
+                        <input autoFocus={true} onKeyPress={enterKeyPress} onChange={updateResponse} value={state.response}/>
                         <div>Score: {state.score}</div>
                     </div>
                 );
