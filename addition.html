@@ -16,6 +16,10 @@
             .incorrect {
                 color: crimson;
             }
+            #winner {
+                font-size: 58px;
+                color: lime;
+            }
         </style>
         <title>Counter</title>
     </head>
@@ -63,6 +67,14 @@
                         ...state,
                         response: event.target.value
                     })
+                }
+
+                if (state.score === 10) {
+                    return (
+                        <div id="winner">
+                            You won!
+                        </div>
+                    );
                 }
 
                 return (
